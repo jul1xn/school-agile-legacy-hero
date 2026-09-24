@@ -1,0 +1,893 @@
+
+================================================================================
+FILE: Bijlage 0 Opdrachtomschrijving.docx
+================================================================================
+
+​
+​​​​
+Context
+TechnovaWeb is een bedrijf dat zich richt op het ontwikkelen van websites, webapplicaties en apps. In 30 jaar tijd is TechnovaWeb uitgegroeid tot een groot bedrijf. Accountmanagers halen de opdrachten binnen. Projectleiders voeren samen met applicatieontwikkelaars de opdrachten uit. Dit gebeurt in de vorm van projectteams.
+Opdrachtgever
+TechnovaWeb is vorig jaar benaderd door de heer Verhoeven voor het maken van een applicatie voor zijn restaurant, Excellent Taste. Deze nieuw ontwikkelde applicatie wordt nu enige maanden gebruikt voor het maken van reserveringen en opnemen van bestellingen. De afgelopen periode is er een aantal aanvullende wensen en eisen geformuleerd. Deze eisen en wensen voor het onderhoud enbeheer van de applicatie ontvang je tijdens de odpracht.
+Jouw taak
+Je werkt als junior applicatieontwikkelaar bij TechnovaWeb. Jouw taak is het onderhouden van de applicatie van Excellent Taste en het beheren van de documentatie. Je werkt in opdracht van jouw leidinggevenden. Je stemt je werkzaamheden af met één van deze heren.
+Opdracht
+​​​​Je leidinggevende heeft van Excellent Taste aanvullende eisen en wensen ontvangen voor een reserverings- en bestellingenapplicatie. In deze opdracht ga je de applicatie onderhouden.
+Je gaat als eerste aan de slag met de tickets die de meeste prioriteit hebben, kijk hierbij goed naar de SLA. 
+Analyseren en categoriseren tickets
+Lees Bijlage 1 Procedure afhandeling tickets TechnovaWeb en Bijlage 2 Uittreksel SLA.
+Neem van je leidinggevende Bijlage 3 Persoonlijke ticketlijst in ontvangst.
+In deze lijst staan de tickets. Categoriseer deze tickets. Maak hierbij gebruik van de categorieën zoals die benoemd zijn in Bijlage 1 Procedure afhandeling tickets TechnovaWeb. 
+Noteer de categorie van de tickets in Bijlage 3 Persoonlijke ticketlijst 
+Aandragen en doorvoeren oplossingen
+Overleg met je leidinggevende welke van de tickets je gaat realiseren (Spoed, Open en Wens).
+Bedenk oplossingen voor de toegewezen tickets. 
+Gebruik hierbij de uitgewerkte applicatie en database zoals je kunt terugvinden in Github: https://classroom.github.com/a/eNsGEE0v
+Houd rekening met de randvoorwaarden zoals vermeld in Bijlage 2 Uittreksel SLA, Bijlage 5 Vastgesteld programma van eisen, Bijlage 6 Vastgesteld functioneel ontwerp en Bijlage 7 Vastgesteld technisch ontwerp.
+Vul voor deze tickets het aanpassingendocument in. Gebruik daarbij Bijlage 8 Sjabloon Aanpassingendocument. Alleen de kolommen Uitgevoerd Door en Uitgevoerd Datum vul je nog niet in.
+Realiseer de gekozen oplossing voor de tickets in de applicatie en/of de database. Maak hierbij gebruik van Bijlage 4 Uitgewerkte applicatie opdracht (te vinden in GitHub) en Bijlage 9 Coding conventions TechnovaWeb.
+Documenteren en communiceren
+Documenteer de doorgevoerde wijzigingen volgens Bijlage 1 Procedure afhandeling tickets TechnovaWeb (hoofdstuk Tickets met categorie Spoed, Open of Wens).
+Noteer je initialen en de datum in de kolom Doorgevoerd in Bijlage 8 Sjabloon Aanpassingendocument. Geef de tickets uit je persoonlijke ticketlijst de status Uitgevoerd.
+Communiceer de aanpassingen aan je leidinggevende.
+Werk de applicatiedocumentatie bij, zodat deze weer volledig en actueel is. Gebruik hierbij Bijlage 1 Procedure afhandeling tickets TechnovaWeb.
+Maak een nieuwe minorversie van de applicatie. Gebruik hierbij Bijlage 11 Procedure versiebeheer TechnovaWeb. Voeg de gegevens van deze nieuwe versie toe aan Bijlage 12 Vastgesteld document versiebeheer.
+Archiveer de nieuwe versie in Bijlage 13 Vastgestelde huidige versie applicatie.
+Resultaat
+Als resultaat van deze opdracht lever je de volgende producten en/of diensten op. Dit lever je bij de final commit op via Github.
+De ingevulde en geaccordeerde Bijlage 3 Persoonlijke ticketlijst 
+Aangepaste documentatie
+De gewijzigde applicatie met de doorgevoerde wijzigingen voor de tickets 
+Het creatiescript voor de database (indien gewijzigd)
+Een (export van) de database gevuld met testdata
+De broncode van onderdelen van de applicatie die je gewijzigd hebt.
+De werkende applicatie die je gewijzigd hebt.
+Planning (let op, we beginnen in week 3)
+Week 3: Documentatie doorlezen, Applicatie installeren & Tickets categoriseren.
+Week 4: Persoonlijke ticketlijst oplossen
+Week 5: Persoonlijke ticketlijst oplossen
+Week 6: Start extra Wens/Project tickets + tussenoplevering einde week
+Week 7: Wens/Project tickets
+Week 8: Wens/Project tickets
+Week 9: Wens/Project tickets + Eindoplevering
+Let op: zorg dat je bij iedere ticket de documentatie bijwerkt.
+​
+
+
+================================================================================
+FILE: Bijlage 1 Procedure afhandeling tickets TechnovaWeb.docx
+================================================================================
+
+Bijlage 1 Procedure afhandeling tickets TechnovaWeb
+Geldig voor de afdeling applicatieontwikkeling ten behoeve van onderhoud en beheer van door TechnovaWeb ontwikkelde applicaties
+Inhoud
+Algemeen	3
+Ticketcategorieën	3
+Ticketstatus	3
+Dagelijkse toewijzing tickets	3
+Tickets met categorie Spoed, Open of Wens	4
+Tickets met status Doorgevoerd	4
+Tickets met status Beheer	4
+Controle van het functioneel en technisch ontwerp	5
+Controle bronbestanden	5
+Controle databasescript	5
+Controle aanpassingendocument	5
+Controle testrapport	6
+Afronden ticket	6
+Algemeen
+Het onderhoud en beheer van door TechnovaWeb ontwikkelde applicaties wordt gestuurd door de ticketlijst. Elke applicatie heeft een eigen ticketlijst. Op deze lijst staan alle ontwikkelactiviteiten voor een applicatie. Op deze manier ontstaat samen met het document versiebeheer een goed beeld van de veranderingen die een applicatie heeft ondergaan.
+De gebruikers van de applicaties van TechnovaWeb kunnen de fouten en wensen die ze tijdens het gebruik van de applicatie tegenkomen, melden bij de supportafdeling van TechnovaWeb. De supportmedewerkers van TechnovaWeb proberen elke fout of wens zo goed mogelijk te omschrijven en schatten in op welke applicatie dat ticket betrekking heeft. Ze hebben geen diepgaande kennis van alle applicaties die door TechnovaWeb zijn ontwikkeld. Het is daarom altijd een inschatting voor welke applicatie een ticket geldt.
+Ticketcategorieën
+Een ticket krijgt een van de volgende categorieën.
+Ticketstatus
+Een ticket heeft een van de volgende statussen.
+Dagelijkse toewijzing tickets
+De applicatieontwikkelaars van TechnovaWeb bepalen aan het begin van elke werkdag gezamenlijk welke openstaande tickets ieder voor die dag op zich neemt. Dat is uiteraard afhankelijk van de beschikbare tijd en van andere activiteiten die dag.
+Een uitzondering hierop zijn de spoedtickets die direct moeten worden behandeld. Als de supportafdeling van TechnovaWeb een ticket aanmaakt waarbij ingeschat wordt dat die direct moet worden opgelost, dan ontvangen de applicatieontwikkelaars een alert, waarna zij direct onderling overleggen wie dat ticket oplost.
+Tickets met categorie Spoed, Open of Wens
+Voor de tickets met categorie Spoed, Open of Wens worden de volgende stappen ondernomen.
+Controle van de categorie en status
+Is het omschreven probleem duidelijk?
+Zo nee, dan moet worden achterhaald wat het probleem precies is.
+Heeft het ticket betrekking op de aangegeven applicatie?
+Zo nee, dan krijgt dit ticket alsnog de status Retour en is het ticket (voorlopig) afgehandeld.
+Beschrijft het ticket een softwareprobleem?
+Zo nee, dan krijgt dit ticket alsnog de status Retour en is het ticket (voorlopig) afgehandeld.
+Past het ticket binnen het SLA?
+Zo nee dan krijgt dit ticket alsnog de status Onuitvoerbaar en is het ticket afgehandeld.
+Past het ticket binnen het programma van eisen, het functioneel ontwerp en het SLA?
+Als de oplossing meer dan twee uur kost, dan krijgt dit ticket alsnog de categorie Project en is het ticket afgehandeld.
+Mogelijke oplossing?
+Als er een oplossing voorhanden is, passend binnen het programma van eisen en het SLA, dan wordt het ticket aan het aanpassingendocument van de applicatie toegevoegd en de oplossing wordt doorgevoerd.
+Doorvoeren van de gekozen oplossing
+De gekozen oplossing wordt in de database en/of de broncode van de applicatie aangebracht en daar ook gedocumenteerd.
+De uitgevoerde oplossing wordt gedocumenteerd in het aanpassingendocument.
+Het ticket krijgt de status Doorgevoerd.
+De programmeur doet de programmeurstest (test of het programma technisch foutloos werkt) voor de gekozen oplossing. De acceptatietest wordt door het testteam van de supportafdeling zo nodig samen met de gebruikers uitgevoerd. Het testteam zorgt voor een volledig en actueel testrapport.
+Tickets met status Doorgevoerd
+De tickets met status Doorgevoerd worden aan het testteam van de supportafdeling toegewezen en daar getest. Hier wordt een volledig en actueel testrapport voor dit ticket gemaakt. Als de wijzigingen naar tevredenheid zijn doorgevoerd, zet het testteam de status op Beheer.
+Tickets met status Beheer
+Op de afdeling applicatieontwikkeling wordt voor de tickets met status Beheer een beheerslag uitgevoerd, voordat het ticket wordt afgerond. Dat wil zeggen dat de applicatiedocumentatie nog eens wordt gecontroleerd op volledigheid en actualiteit. Waar nodig wordt deze aangevuld.
+Onder applicatiedocumentatie wordt het volgende verstaan.
+Het functioneel ontwerp
+Het technisch ontwerp
+De bronbestanden
+Het databasescript
+Het document versiebeheer
+Het testrapport
+Overal in de documentatie wordt het ticketnummer vermeld. Om de ticketnummers in de documentatie gemakkelijk te kunnen terugvinden, wordt dit nummer tussen dubbele rechte haken geplaatst. Bijvoorbeeld ‘Gewijzigd n.a.v. ticketnummer [[1726]]’.
+Zie hiervoor ook de Coding conventions van TechnovaWeb.
+Controle van het functioneel en technisch ontwerp
+In het functioneel en technisch ontwerp worden de volgende controles uitgevoerd.
+Elke wijziging moet onder vermelding van het ticketnummer worden opgenomen. Heeft een ticket geen wijziging tot gevolg? Dan wordt het ticketnummer aan het einde van het document toch toegevoegd met de tekst ‘Geen wijzigingen’.
+Als het ticketnummer er nog niet in voorkomt, dan moet het functioneel en/of technisch ontwerp op de juiste plaats worden aangepast onder vermelding van het ticketnummer.
+Controle bronbestanden
+Voor de bronbestanden van de applicatie worden de volgende controles uitgevoerd.
+Op de plaats(en) van de wijziging(en) in de broncode wordt het ticketnummer vermeld in een commentaarregel, een en ander volgens de coding conventions van TechnovaWeb.
+Indien het ticketnummer niet voorkomt, maar er wel wijzigingen zijn aangebracht, dan krijgt het ticket de status Incompleet. Het ticket wordt dan weer opgenomen in de verzameling tickets die bij de afdeling Applicatieontwikkeling in behandeling is. Daar wordt verder onderzocht waarom het ticketnummer ontbreekt.
+Controle databasescript
+Voor het databasescript worden de volgende controles uitgevoerd.
+Op de plaats(en) van de wijziging(en) in het databasescript, of in de tool waarmee de databasestructuur gegenereerd wordt, wordt het ticketnummer vermeld in een commentaarregel, een en ander volgens de coding conventions van TechnovaWeb.
+Indien de database geen gebruikmaakt van scripts of een tool (zoals MS Access) moeten de wijzigingen in een apart tekstbestand worden genoteerd. In de rootmap van de broncode van de applicatie moeten deze wijzigingen in een tekstbestand met dezelfde naam als de naam van de database en de extensie .dbw worden opgenomen.
+Indien het ticketnummer nog niet voorkomt, maar er wel wijzigingen zijn aangebracht, dan krijgt het ticket de status Incompleet. Het ticket wordt dan weer opgenomen in de verzameling tickets die bij de afdeling Applicatieontwikkeling in behandeling is. Daar wordt verder onderzocht waarom het ticketnummer ontbreekt.
+Controle aanpassingendocument
+Voor het aanpassingendocument van een applicatie worden de volgende controles uitgevoerd.
+In het aanpassingendocument moet elk ticketnummer minimaal twee keer voorkomen: in het onderdeel Planning en in het onderdeel Uitvoering. Mogelijk ook nog in het onderdeel Aanpassing.
+Indien het ticketnummer nog niet voorkomt, dan krijgt het ticket de status Incompleet. Het ticket wordt dan weer opgenomen in de verzameling tickets die bij de afdeling applicatieontwikkeling in behandeling is. Daar wordt verder onderzocht waarom het ticketnummer ontbreekt.
+Controle testrapport
+Voor het testrapport worden de volgende controles uitgevoerd.
+Er moet minimaal 1 testscenario voor het ticket bestaan. Onder het kopje Functionaliteit in het testscenario moet het ticketnummer vermeld zijn.
+Als het ticketnummer niet in het testrapport voorkomt, dan krijgt het ticket de status Doorgevoerd. Het ticket wordt zodoende weer overgedragen aan het testteam van de supportafdeling dat eerst het testrapport op orde moet brengen.
+Afronden ticket
+Als het ticket volledig is doorgevoerd in de applicatiedocumentatie en deze weer volledig en actueel is, dan krijgt het ticket de status Afgerond.
+Categorie | Omschrijving
+Spoed | Ticket onmiddellijk oplossen.
+Open | Ticket meenemen in de planning van de komende week.
+Wens | Ticket meenemen in de planning van de komende maand.
+Project | Ticket is een nieuwbouwproject.
+Onuitvoerbaar | Ticket is NIET uitvoerbaar en wordt NIET opgelost.
+Status | Omschrijving
+Bezet | Ticket is in behandeling bij de afdeling Applicatieontwikkeling.
+Doorgevoerd | Ticket is afgehandeld door de afdeling Applicatieontwikkeling.
+Retour | Ticket is niet oplosbaar.
+Incompleet | De documentatie is niet op orde.
+Test | Ticket is in behandeling bij het testteam van de supportafdeling.
+Beheer | Ticket is getest door het testteam van de supportafdeling en akkoord bevonden.
+Afgerond | Ticket is opgelost.
+
+
+================================================================================
+FILE: Bijlage 11 Procedure versiebeheer TechnovaWeb.docx
+================================================================================
+
+Bijlage 11 Procedure versiebeheer TechnovaWeb
+Geldig voor de afdeling Applicatieontwikkeling t.b.v. door TechnovaWeb ontwikkelde applicaties
+Opslagstructuur voor de applicatiedocumentatie
+De applicatiedocumentatie wordt voor elke versie van de applicatie gearchiveerd. Onder de applicatiedocumentatie wordt het volgende verstaan.
+Het programma van eisen
+Het functioneel ontwerp
+Het technisch ontwerp 
+De bronbestanden
+Het databasescript
+Het document versiebeheer
+Het testrapport
+Alle versies van door TechnovaWeb ontwikkelde applicaties worden opgeslagen in een map met de naam van de betreffende applicatie: de versiemap. 
+In het onderstaande voorbeeld is dit de map Voorbeeld-applicatie. 
+Elke versiemap heeft drie submappen.
+Bronbestanden
+Hierin zijn alle bronbestanden van de applicatie opgenomen.
+Database
+Hierin staan alle databasecreaties en wijzigingsscripts, dan wel het script van de tool waarmee de database gecreëerd is. Indien de database geen gebruikmaakt van scripts of een tool (zoals MS Access), dan staat hierin het databasebestand, alsook het wijzigingsbestand met de extensie .dbw.
+Documenten
+Het programma van eisen, het functioneel ontwerp, het technisch ontwerp, het aanpassingendocument, het testrapport en het document versiebeheer.
+Voorbeeld mappenstructuur versiebeheer
+
+Versienummer
+De versiemap met het hoogste versienummer geeft het huidige versienummer aan. Het huidige versienummer voor de Voorbeeld-applicatie is hierboven 2.00.
+In de submappen Bronbestanden, Database, Documenten van de versiemappen is álle applicatiedocumentatie opgeslagen. Ook als de bronbestanden, de database of een van de documenten van een bepaalde versie niet gewijzigd is ten opzichte van een vorige versie, worden deze toch (ongewijzigd) opgenomen in die versie.
+Een nieuwe versie kan het volgende zijn.
+Minorversie
+Het getal achter de punt van het versienummer wordt met 1 verhoogd. Bijvoorbeeld versie 1.01 wordt 1.02.
+Majorversie
+Het getal voor de punt van het versienummer wordt met 1 verhoogd, en na de punt komt 00 te staan. Bijvoorbeeld versie 1.03 wordt 2.00.
+Document versiebeheer
+In het document versiebeheer wordt het laatste (nieuwe) versienummer genoteerd. Ook wordt aangegeven welke tickets in deze nieuwe versie zijn doorgevoerd. Daarnaast wordt voor zowel de ontwikkelomgeving als de productieomgeving de (fysieke) vindplaats van de applicatiedocumentatie genoteerd.
+De laatste (nieuwe) versie staat altijd als eerste in het document versiebeheer.
+
+
+================================================================================
+FILE: Bijlage 12 Vastgesteld document versiebeheer.docx
+================================================================================
+
+Bijlage 12 Voorbeelduitwerking Document versiebeheer
+Versienummer | 1.01
+Releasedatum | 1 september 2017
+Tickets | 211 t/m 229, 241, 245, 255
+Ontwikkelomgeving | Ontwikkelomgeving
+Broncode | K:\Versiebeheer\ExcellentTaste\Versie 1.02\Bronbestanden\excellenttaste.zip
+Database | K:\Versiebeheer\ExcellentTaste\Versie 1.02\Database\excellenttaste_db.sql
+Databaseverbinding | PDO('mysql:host=localhost;dbname=excellenttaste_db;charset=utf8', 'root', 'root')
+Ontwikkeltools | JEdit, jQuery, Bootstrap
+Productieomgeving | Productieomgeving
+Applicatie | domains/excellentaste.nl/public_html/excellenttaste/core
+Database | https://s018.webhostingserver.nl/deb10018_core
+Databaseverbinding | PDO('mysql:host=localhost;dbname=excellenttaste_db;charset=utf8', deb10018, 'KNSQIJKL12N78')
+Versienummer | 1.00
+Releasedatum | 14 mei 2016
+Tickets | Initiële release
+Ontwikkelomgeving | Ontwikkelomgeving
+Broncode | K:\Versiebeheer\ExcellentTaste\Versie 1.00\Bronbestanden\excellenttaste.zip
+Database | K:\Versiebeheer\ExcellentTaste\Versie 1.00\Database\excellenttaste_db.sql
+Databaseverbinding | PDO('mysql:host=localhost;dbname=excellenttaste_db;charset=utf8', 'root', 'root')
+Ontwikkeltool | UltraEdit, jQuery
+Productieomgeving | Productieomgeving
+Applicatie | domains/excellentaste.nl/public_html/excellenttaste/core
+Database | https://s018.webhostingserver.nl/deb10018_core
+Databaseverbinding | PDO('mysql:host=localhost;dbname=excellenttaste_db;charset=utf8', deb10018, 'KWKM451N78qxy')
+
+
+================================================================================
+FILE: Bijlage 13 Testrapport.docx
+================================================================================
+
+Testrapport
+Testscenario's versie 1.01
+.......
+.....
+..... 
+Testscenarios's n.a.v. tickets 212 t/m 229 en ticket 241 en 245
+.....
+.....
+Testscenario's initiële versie
+
+.....
+.....
+.....
+Functionaliteit | Gegevens->Klanten
+Actie | Invoeren/wijzigen van een klantnaam.
+N.a.v. ticketnummer [[211]] | Invoeren/wijzigen van een klantnaam.
+N.a.v. ticketnummer [[211]] | Invoeren/wijzigen van een klantnaam.
+N.a.v. ticketnummer [[211]] | Invoeren/wijzigen van een klantnaam.
+N.a.v. ticketnummer [[211]] | Invoeren/wijzigen van een klantnaam.
+N.a.v. ticketnummer [[211]] | Invoeren/wijzigen van een klantnaam.
+N.a.v. ticketnummer [[211]]
+Scenario | De klantnaam is 30 tekens lang | De klantnaam is 30 tekens lang | De klantnaam is 30 tekens lang | De klantnaam is 30 tekens lang | De klantnaam is 30 tekens lang | De klantnaam is 30 tekens lang
+Verwacht resultaat | De een klantnaam van 30 tekens in de database en op het scherm | De een klantnaam van 30 tekens in de database en op het scherm | De een klantnaam van 30 tekens in de database en op het scherm | De een klantnaam van 30 tekens in de database en op het scherm | De een klantnaam van 30 tekens in de database en op het scherm | De een klantnaam van 30 tekens in de database en op het scherm
+Werkelijk resultaat | De klantnaam is slechts 25 posities. | De klantnaam is slechts 25 posities. | De klantnaam is slechts 25 posities. | De klantnaam is slechts 25 posities. | De klantnaam is slechts 25 posities. | De klantnaam is slechts 25 posities.
+Aanpassingen | In de database in de tabel klant de lengte van het veld klantnaam verhogen tot 30 posities | In de database in de tabel klant de lengte van het veld klantnaam verhogen tot 30 posities | In de database in de tabel klant de lengte van het veld klantnaam verhogen tot 30 posities | In de database in de tabel klant de lengte van het veld klantnaam verhogen tot 30 posities | In de database in de tabel klant de lengte van het veld klantnaam verhogen tot 30 posities | In de database in de tabel klant de lengte van het veld klantnaam verhogen tot 30 posities
+Uitvoering | Uren | 1 | Prioriteit | 2 | Door | DVD
+Actie | N.a.v. ticketnummer [[212]]
+Invoeren/wijzige .........
+Scenario | .....
+Verwacht resultaat | .....
+..... | ......
+Functionaliteit | .....
+Actie | Tonen reserveringen van de huidige dag.
+N.a.v. ticketnummer [[255]] | Tonen reserveringen van de huidige dag.
+N.a.v. ticketnummer [[255]] | Tonen reserveringen van de huidige dag.
+N.a.v. ticketnummer [[255]] | Tonen reserveringen van de huidige dag.
+N.a.v. ticketnummer [[255]] | Tonen reserveringen van de huidige dag.
+N.a.v. ticketnummer [[255]] | Tonen reserveringen van de huidige dag.
+N.a.v. ticketnummer [[255]]
+Scenario | Er zijn reserveringen voor zowel vandaag als de toekomst. En er zijn reserveringen uit het verleden. | Er zijn reserveringen voor zowel vandaag als de toekomst. En er zijn reserveringen uit het verleden. | Er zijn reserveringen voor zowel vandaag als de toekomst. En er zijn reserveringen uit het verleden. | Er zijn reserveringen voor zowel vandaag als de toekomst. En er zijn reserveringen uit het verleden. | Er zijn reserveringen voor zowel vandaag als de toekomst. En er zijn reserveringen uit het verleden. | Er zijn reserveringen voor zowel vandaag als de toekomst. En er zijn reserveringen uit het verleden.
+Verwacht resultaat | De verschillende reserveringen zijn afwijkend gekleurd. 
+Rood = verleden, groen = vandaag en oranje = toekomst | De verschillende reserveringen zijn afwijkend gekleurd. 
+Rood = verleden, groen = vandaag en oranje = toekomst | De verschillende reserveringen zijn afwijkend gekleurd. 
+Rood = verleden, groen = vandaag en oranje = toekomst | De verschillende reserveringen zijn afwijkend gekleurd. 
+Rood = verleden, groen = vandaag en oranje = toekomst | De verschillende reserveringen zijn afwijkend gekleurd. 
+Rood = verleden, groen = vandaag en oranje = toekomst | De verschillende reserveringen zijn afwijkend gekleurd. 
+Rood = verleden, groen = vandaag en oranje = toekomst
+Werkelijk resultaat | De afwijkende kleuren zijn niet aangebracht. | De afwijkende kleuren zijn niet aangebracht. | De afwijkende kleuren zijn niet aangebracht. | De afwijkende kleuren zijn niet aangebracht. | De afwijkende kleuren zijn niet aangebracht. | De afwijkende kleuren zijn niet aangebracht.
+Aanpassingen | In classes/page/reserveringen.php, function getReserveringen() aan elke lijstregel een css class toevoegen met de naam toekomst, vandaag en verleden. In css/style.css deze classes met het juiste kleurattribuut opnemen. | In classes/page/reserveringen.php, function getReserveringen() aan elke lijstregel een css class toevoegen met de naam toekomst, vandaag en verleden. In css/style.css deze classes met het juiste kleurattribuut opnemen. | In classes/page/reserveringen.php, function getReserveringen() aan elke lijstregel een css class toevoegen met de naam toekomst, vandaag en verleden. In css/style.css deze classes met het juiste kleurattribuut opnemen. | In classes/page/reserveringen.php, function getReserveringen() aan elke lijstregel een css class toevoegen met de naam toekomst, vandaag en verleden. In css/style.css deze classes met het juiste kleurattribuut opnemen. | In classes/page/reserveringen.php, function getReserveringen() aan elke lijstregel een css class toevoegen met de naam toekomst, vandaag en verleden. In css/style.css deze classes met het juiste kleurattribuut opnemen. | In classes/page/reserveringen.php, function getReserveringen() aan elke lijstregel een css class toevoegen met de naam toekomst, vandaag en verleden. In css/style.css deze classes met het juiste kleurattribuut opnemen.
+Uitvoering | Uren | 1 | Prioriteit | 1 | Door | KD
+Functionaliteit | Gegevens
+Actie | Gerecht wijzigen | Gerecht wijzigen | Gerecht wijzigen | Gerecht wijzigen | Gerecht wijzigen | Gerecht wijzigen
+Scenario | De menu hoofdgroep en subgroep moeten worden gewijzigd | De menu hoofdgroep en subgroep moeten worden gewijzigd | De menu hoofdgroep en subgroep moeten worden gewijzigd | De menu hoofdgroep en subgroep moeten worden gewijzigd | De menu hoofdgroep en subgroep moeten worden gewijzigd | De menu hoofdgroep en subgroep moeten worden gewijzigd
+Verwacht resultaat | De gebruiker mag alleen kunnen kiezen uit bestaande combinaties van hoofd- en subgroepen | De gebruiker mag alleen kunnen kiezen uit bestaande combinaties van hoofd- en subgroepen | De gebruiker mag alleen kunnen kiezen uit bestaande combinaties van hoofd- en subgroepen | De gebruiker mag alleen kunnen kiezen uit bestaande combinaties van hoofd- en subgroepen | De gebruiker mag alleen kunnen kiezen uit bestaande combinaties van hoofd- en subgroepen | De gebruiker mag alleen kunnen kiezen uit bestaande combinaties van hoofd- en subgroepen
+Werkelijk resultaat | De gebruiker moet kiezen met twee keuzelijsten. | De gebruiker moet kiezen met twee keuzelijsten. | De gebruiker moet kiezen met twee keuzelijsten. | De gebruiker moet kiezen met twee keuzelijsten. | De gebruiker moet kiezen met twee keuzelijsten. | De gebruiker moet kiezen met twee keuzelijsten.
+Aanpassingen | In classes/page/gegevens.php, function makeFormControlSet() moet een nieuw edittype (select) worden toegevoegd. Dit type zorgt ervoor dat een keuzelijst gegenereerd wordt die de gecombineerde omschrijvingen van de hoofd- en subgroepen bevat. | In classes/page/gegevens.php, function makeFormControlSet() moet een nieuw edittype (select) worden toegevoegd. Dit type zorgt ervoor dat een keuzelijst gegenereerd wordt die de gecombineerde omschrijvingen van de hoofd- en subgroepen bevat. | In classes/page/gegevens.php, function makeFormControlSet() moet een nieuw edittype (select) worden toegevoegd. Dit type zorgt ervoor dat een keuzelijst gegenereerd wordt die de gecombineerde omschrijvingen van de hoofd- en subgroepen bevat. | In classes/page/gegevens.php, function makeFormControlSet() moet een nieuw edittype (select) worden toegevoegd. Dit type zorgt ervoor dat een keuzelijst gegenereerd wordt die de gecombineerde omschrijvingen van de hoofd- en subgroepen bevat. | In classes/page/gegevens.php, function makeFormControlSet() moet een nieuw edittype (select) worden toegevoegd. Dit type zorgt ervoor dat een keuzelijst gegenereerd wordt die de gecombineerde omschrijvingen van de hoofd- en subgroepen bevat. | In classes/page/gegevens.php, function makeFormControlSet() moet een nieuw edittype (select) worden toegevoegd. Dit type zorgt ervoor dat een keuzelijst gegenereerd wordt die de gecombineerde omschrijvingen van de hoofd- en subgroepen bevat.
+Uitvoering | Uren | 3 | Prioriteit | 1 | Door | KD
+Actie | Gerecht verwijderen | Gerecht verwijderen | Gerecht verwijderen | Gerecht verwijderen | Gerecht verwijderen | Gerecht verwijderen
+Scenario | Het gerecht is in een (eerdere) bestelling opgenomen. | Het gerecht is in een (eerdere) bestelling opgenomen. | Het gerecht is in een (eerdere) bestelling opgenomen. | Het gerecht is in een (eerdere) bestelling opgenomen. | Het gerecht is in een (eerdere) bestelling opgenomen. | Het gerecht is in een (eerdere) bestelling opgenomen.
+Verwacht resultaat | Het gerecht mag niet worden verwijderd. | Het gerecht mag niet worden verwijderd. | Het gerecht mag niet worden verwijderd. | Het gerecht mag niet worden verwijderd. | Het gerecht mag niet worden verwijderd. | Het gerecht mag niet worden verwijderd.
+Werkelijk resultaat | Het gerecht wordt toch verwijderd, waardoor bestellingen ontstaan die ongeldige gerechten bevatten. | Het gerecht wordt toch verwijderd, waardoor bestellingen ontstaan die ongeldige gerechten bevatten. | Het gerecht wordt toch verwijderd, waardoor bestellingen ontstaan die ongeldige gerechten bevatten. | Het gerecht wordt toch verwijderd, waardoor bestellingen ontstaan die ongeldige gerechten bevatten. | Het gerecht wordt toch verwijderd, waardoor bestellingen ontstaan die ongeldige gerechten bevatten. | Het gerecht wordt toch verwijderd, waardoor bestellingen ontstaan die ongeldige gerechten bevatten.
+Aanpassingen | In de database een relatie tussen de tabellen gerecht en bestelling aanbrengen, die de referentiele integriteit afdwingt.
+In classes/page/gegevens.php, function getDeleteHtml() de SQL foutmelding afvangen indien het gerecht niet kan worden verwijderd.
+In dat geval een passende melding op het scherm tonen. | In de database een relatie tussen de tabellen gerecht en bestelling aanbrengen, die de referentiele integriteit afdwingt.
+In classes/page/gegevens.php, function getDeleteHtml() de SQL foutmelding afvangen indien het gerecht niet kan worden verwijderd.
+In dat geval een passende melding op het scherm tonen. | In de database een relatie tussen de tabellen gerecht en bestelling aanbrengen, die de referentiele integriteit afdwingt.
+In classes/page/gegevens.php, function getDeleteHtml() de SQL foutmelding afvangen indien het gerecht niet kan worden verwijderd.
+In dat geval een passende melding op het scherm tonen. | In de database een relatie tussen de tabellen gerecht en bestelling aanbrengen, die de referentiele integriteit afdwingt.
+In classes/page/gegevens.php, function getDeleteHtml() de SQL foutmelding afvangen indien het gerecht niet kan worden verwijderd.
+In dat geval een passende melding op het scherm tonen. | In de database een relatie tussen de tabellen gerecht en bestelling aanbrengen, die de referentiele integriteit afdwingt.
+In classes/page/gegevens.php, function getDeleteHtml() de SQL foutmelding afvangen indien het gerecht niet kan worden verwijderd.
+In dat geval een passende melding op het scherm tonen. | In de database een relatie tussen de tabellen gerecht en bestelling aanbrengen, die de referentiele integriteit afdwingt.
+In classes/page/gegevens.php, function getDeleteHtml() de SQL foutmelding afvangen indien het gerecht niet kan worden verwijderd.
+In dat geval een passende melding op het scherm tonen.
+Uitvoering | Uren | 4 | Prioriteit | 3 | Door | IW
+
+
+================================================================================
+FILE: Bijlage 2 Uittreksel SLA.docx
+================================================================================
+
+Bijlage 2 Uittreksel SLA
+Tussen
+Restaurant Excellent Taste
+en
+TechnovaWeb
+betreffende de
+reserverings- en bestellingenapplicatie
+De reserverings- en bestellingenapplicatie (hierna 'de applicatie') van Excellent Taste is ontwikkeld door TechnovaWeb in opdracht van de eigenaar van Excellent Taste, dhr. Verhoeven. 
+Het onderhoud en beheer van de applicatie wordt gestuurd door de ticketlijst van TechnovaWeb. Op de ticketlijst staan alle uit te voeren activiteiten met betrekking tot de applicatie. De tickets worden aangemaakt en beheerd door de supportafdeling van TechnovaWeb. De tickets kunnen betrekking hebben op de volgende situaties.
+Een gebruiker van de applicatie ontdekt een fout.
+De fout blokkeert de werking van de applicatie. Het ticket moet direct worden opgelost en krijgt de categorie Spoed.
+Ondanks de fout blijft de applicatie werkbaar. Het ticket wordt meegenomen in de planning van de komende week. De categorie is Open.
+Een gebruiker van de applicatie heeft een verbeter- of uitbreidingswens.
+De wens is uitvoerbaar en
+is binnen een tijdsbestek van twee uur aan te brengen. Het ticket wordt meegenomen in de planning van de komende maand. De categorie is Wens.
+Het kost meer dan twee uur om de wens aan te brengen. Het ticket wordt beschouwd als een nieuwbouwproject. Het ticket wordt niet opgelost en wordt overgedragen aan de senior softwaredeveloper bij TechnovaWeb die voor verdere afhandeling zorgt. De categorie is Project.
+De wens is niet uitvoerbaar.
+Het ticket wordt niet opgelost en overgedragen aan de senior softwaredeveloper van TechnovaWeb die voor de verdere afhandeling zorgt. De bijbehorende categorie is Onuitvoerbaar.
+De oplossing voor de fouten, verbeter- of uitbreidingswensen dienen altijd realiseerbaar te zijn
+binnen de bij de Excellent Taste aanwezige hardwareconfiguraties en ICT-infrastructuur;
+zonder extra opleiding van de gebruikers van de applicatie (vrijwilligers);
+zonder extra externe software(componenten) van andere (commerciële) partijen;
+zonder tussenkomst van andere partijen dan TechnovaWeb.
+
+
+================================================================================
+FILE: Bijlage 3 Persoonlijke ticketlijst.docx
+================================================================================
+
+Bijlage 3 Sjabloon Persoonlijke ticketlijst 
+Reserverings- en bestellingenapplicatie 
+van restaurant Excellent Taste
+Naam kandidaat: 	
+ | Omschrijving | Categorie
+320 | De afbeelding op de homepage van de site is niet van Excellent Taste. | 
+322 | Er kan dubbel worden geboekt (zelfde tijd, zelfde tafel). | x
+324 | Indien de gegevens van een klant worden gewist, dan verdwijnt niet de gekoppelde reservering. (Is dit een wenselijke situatie?) | ?
+326 | Een bestelling (gerecht of drank) moet door de kok/barman gereed gemeld kunnen worden. | ?
+328 | Indien in het scherm Gegevens (per ongeluk) op verwijderen wordt geklikt, 
+dan wordt het betreffende gegeven direct zonder waarschuwing verwijderd. | x
+329 | Bij het maken van een reservering standaard de huidige datum invullen. | x
+330 | Het overzicht voor de barman is nu het overzicht voor de ober. Het echte overzicht voor de ober ontbreekt. | x
+331 | Bij het maken van een reservering kan een ongeldige tijd worden ingevoerd, bijvoorbeeld ‘30:00’. Datums idem. | v
+334 | De bestelregelregel moet verdwijnen als het aantal d.m.v. het klikken op het minnetje op nul wordt gezet. | x
+335 | Bij het maken van een reservering moet het aantal volwassenen en het aantal kinderen kunnen worden ingevoerd. | v
+336 | Bij het maken van een reservering moeten eventuele allergieën kunnen worden ingevoerd. | x
+337 | Het opvragen van het overzicht voor kok/ober resulteert in een vage foutmelding als er nog geen bestellingen zijn. | chat
+338 | Bij het maken van een reservering moeten eventuele opmerkingen 
+(bijvoorbeeld iemand geeft een voorkeur door voor tafel aan het raam of meldt een verjaardag) kunnen worden ingevoerd. | skip
+340 | Als hetzelfde item nogmaals wordt toegevoegd aan een bestelling, dan moet het aantal van het bestaande item worden verhoogd. 
+Nu wordt er een nieuwe bestelregelregel toegevoegd. | x
+341 | Bij de gerechten de prijs vermelden. | 
+342 | Indien bij het toevoegen van een klant niet alle velden worden ingevuld, dan volgt een foutmelding (van de database?) | 
+344 | Voorraadbeheer
+De voorraad van (grondstoffen van) gerechten registreren. 
+Aan de hand van de bestellingen voorraad bijhouden.
+De voorraad moet per menu-item kunnen worden ingevoerd/aangepast.
+Van de gerechten en samengestelde dranken moet worden bepaald uit welke ingrediënten deze bestaan (recept).
+Van elke bestelling wordt, nadat deze is afgerekend, de voorraadaanpassing automatisch doorgevoerd. | skip
+345 | Menubeheer
+Welke allergieën reageren op welke grondstoffen in het menu.
+Waarschuwing als een klant met opgegeven allergie een ‘verkeerd’ gerecht bestelt.
+Een overzicht van de gerechten kunnen uitdraaien (menukaart).
+Periodieke prijswijzigingen die door de branchevereniging per XML worden aangeboden.
+Van de gerechten en samengestelde dranken moet worden bepaald uit welke ingrediënten deze bestaan (recept).
+Van elk ingrediënt moet worden vastgelegd of en zo ja op welke allergie dit reageert.
+Bij elke toevoeging van een item aan een bestelling wordt een melding gegeven als er een allergie overeenkomt met de allergie(ën) die de klant bij reservering heeft opgegeven. | skip
+346 | Omzet
+De omzet per bestelling registreren en de betaalwijze
+Omzetoverzichten per week per menuhoofdgroep maken. | skip
+347 | Fooienoverzicht per week per medewerker, naar verhouding van het gewerkte aantal uren door een medewerker in een week.
+Na elke betaling van een bestelling moet worden vastgelegd hoeveel fooi de klant gaf.
+Elke medewerker moet worden opgenomen in het systeem.
+Van elke medewerker moet het aantal gewerkte uren worden geregistreerd.
+Er moet een overzicht per week per medewerker komen met daarop het aantal gewerkte uren en de berekende fooi. | skip
+348 | Urenregistratie medewerkers.
+Elke medewerker moet worden opgenomen in het systeem.
+Van elke medewerker moet het aantal gewerkte uren worden geregistreerd. | skip
+350 | Het verwijderen van een reservering lukt niet. Er verschijnt geen (fout)melding en de reservering blijft bestaan. | 
+351 | Bij maken reservering, waarbij niet alle velden zijn ingevuld:
+INSERT INTO reservering (tafel, datum, tijd, klant_id, aantal) VALUES (1, '--', '', 13, ) Mislukt
+Scherm is verder leeg. | 
+353 | Na het printen van de bon voor de klant blijft het scherm met de af te drukken bon afgebeeld, zonder menu. | 
+354 | Bij een poging een bon af te drukken voor een ‘lege’ bestelling worden lelijke foutmeldingen getoond. | 
+355 | Bij het printen van de bon voor de klant staat het menu ook op het scherm. | 
+356 | Het werkelijk afdrukken van de bon op papier levert een blanco vel op. | 
+357 | Het scherm Toevoegen/wijzigen van een klant tijdens het aanmaken van een reservering is niet goed uitgelijnd. | 
+
+
+================================================================================
+FILE: Bijlage 5 Vastgesteld programma van eisen.docx
+================================================================================
+
+Bijlage 5 Vastgesteld programma van eisen
+Inleiding
+TechnovaWeb heeft van de eigenaar van het restaurant Excellent Taste de opdracht gekregen voor het ontwerpen van een applicatie waarmee de reserveringen automatisch verwerkt kunnen worden. Bovendien moeten de bestellingen door deze applicatie verwerkt kunnen worden. Deze applicatie zal het huidige bestelsysteem en papieren reserveringssysteem vervangen.
+Het bedrijf
+Excellent Taste is een restaurant waar lunches en diners geserveerd worden. Meestal is het zo druk dat tafels gereserveerd moeten worden. Als gasten zonder te reserveren komen, dan is de kans groot dat zij moeten worden weggestuurd omdat alle tafels bezet zijn. Op dit moment worden de reserveringen op papier bijgehouden. De drank- en eetbestellingen worden wel geautomatiseerd verwerkt.
+Probleemstelling
+Er is behoefte aan een digitaal reserveringssysteem. Er is nu geen mogelijkheid om vast te leggen of er van een reservering gebruik is gemaakt.
+Doelgroep(en)
+De doelgroep is de medewerkers van het restaurant Excellent Taste.
+Vormgeving
+De schermen moeten snel en zonder overbodig geklik bruikbaar zijn voor de medewerkers. Deze schermen moeten vooral functioneel zijn. Medewerkers moeten snel een bestelling kunnen opnemen met de applicatie. Andere medewerkers moeten snel hun informatie kunnen opvragen. Deze informatie moet helder en duidelijk worden gepresenteerd.
+Informatie
+De applicatie moet de volgende informatie geven.
+De barman moet een lijst kunnen zien met drankjes die klaargemaakt moeten worden. De lijst is gesorteerd op tijd (de oudste bestelling staat bovenaan) en per tafel.
+De kok moet een lijst kunnen zien met gerechten die klaargemaakt moeten worden. Net zoals bij de barman is de lijst gesorteerd op tijd en per tafel.
+Er moet een bon kunnen worden uitgedraaid voor de klant waarop de bestelde producten staan met de prijs en een totaal te betalen prijs.
+De applicatie moet een menukaart en een drankenlijst kunnen genereren.
+Er moet een lijst van reserveringen van de huidige dag kunnen worden opgeroepen, zodat de klanten naar de juiste tafel op het juiste moment kunnen worden verwezen.
+Bij het aanmaken van een reservering in de applicatie, moeten de volgende gegevens ingevoerd worden.
+De achternaam waarop de reservering genoteerd wordt.
+De datum en het tijdstip
+Het aantal personen (aantal volwassenen/aantal kinderen)
+Eventuele allergieën
+Een telefoonnummer
+Overige opmerkingen (bijvoorbeeld iemand geeft een voorkeur door voor tafel aan het raam of meldt een verjaardag.)
+
+
+================================================================================
+FILE: Bijlage 6 Vastgesteld functioneel ontwerp.docx
+================================================================================
+
+Bijlage 6 Vastgesteld functioneel ontwerp
+Inhoud
+Inleiding	3
+Betrokkenen	3
+Functionaliteiten	3
+Navigatiestructuur	4
+Informatiebehoefte	5
+Werkwijze	7
+Verwerkte tickets	8
+Inleiding
+In dit ontwerp vind je een overzicht van de functionaliteiten waaraan de applicatie moet voldoen. Ook de gebruikersschermen, de navigatiestructuur en het uitvoerontwerp worden behandeld.
+Betrokkenen
+De betrokkenen die de applicatie gaan gebruiken.
+De receptionist. Dit kan de barman of een van de obers zijn.
+De ober
+De barman
+De kok
+Functionaliteiten
+De volgende functionaliteiten moeten gerealiseerd worden.
+Reserveringen
+De receptie moet een lijst (op het scherm) van reserveringen van de huidige dag kunnen oproepen.
+Bestelling
+De obers moeten de bestellingen efficiënt kunnen invoeren.
+Bon
+De ober moet een bon kunnen uitdraaien voor de klant waarop de bestelde producten staan met de prijs en een totaal te betalen prijs.
+Overzichten
+Ober
+De ober moet een lijst zien met daarop de dranken en gerechten die klaargemaakt zijn en kunnen worden uitgeserveerd. De lijst is gesorteerd op tijd en tafel.
+Kok
+De kok moet een lijst zien met daarop de gerechten die klaargemaakt moeten worden.
+Dranken
+Alle betrokkenen moeten de menukaart voor dranken kunnen opvragen.
+Gerechten
+Alle betrokkenen moeten de menukaart voor eten kunnen opvragen.
+Gegevens
+De receptie moet de gegevens toevoegen, wijzigen en verwijderen van het volgende.
+Reserveringen
+Klanten 
+Dranken
+Gerechten
+Menu hoofdgroepen
+Menu subgroepen
+Navigatiestructuur
+Informatiebehoefte
+Lijst van reserveringen van de huidige dag
+Datum van vandaag: 29-11-2017
+De bestellingen moeten efficiënt worden ingevoerd.
+Bestelling voor tafel 8:
+Lijst voor de kok
+Lijst voor de ober
+Menukaart
+Bon voor de klant
+Werkwijze
+De gebruikelijke werkwijze bij Excellent Taste is de volgende.
+Een klant reserveert een tafel bij Excellent Taste op een bepaalde datum/tijd.
+Als het gezelschap arriveert, dan controleert de receptionist de reservering en brengt het naar de tafel.
+De ober neemt een aantal bestellingen op.
+De kok ziet de bestelling op zijn lijst verschijnen.
+De kok maakt het gerecht en meldt het de ober als het klaar is.
+De ober serveert het gerecht uit.
+De ober drukt de bon voor de klant af, de klant betaalt en verlaat het pand.
+De ober maakt de tafel schoon en in orde voor een volgende klant
+Verwerkte tickets
+Geen wijzigingen in het functioneel ontwerp voor de tickets.
+[[211]]
+[[212]]
+[[213]]
+[[214]]
+[[215]]
+[[216]]
+[[217]]
+[[218]]
+[[219]]
+[[220]]
+[[221]]
+[[222]]
+[[223]]
+[[224]]
+[[225]]
+[[226]]
+[[227]]
+[[228]]
+[[229]]
+[[241]]
+[[245]]
+[[255]]
+Datum | Tijd | Tafel | Klantnaam | Telefoonnummer | Aantal personen
+29-11-2017 | 17:00 | 8 | Jeroen Krabber | 06 32659825 | 4
+29-11-2017 | 18:00 | 6 | Piet Hein | 05377 26986 | 2
+29-11-2017 | ... | ... | ... | ... | ...
+29-11-2017 | ... | ... | ... | ... | ...
+Artikel | Aantal
+Chaudfontaine rood | 2
+Kasteel donker | 4
+Tomatensoep | 1
+Aspergesoep | 1
+Biefstuk in champignonsaus | 2
+... | ...
+... | ...
+Tafel | Aantal | Gerecht
+1 | 3 | Portie kaas met mosterd
+1 | 1 | Bonengerecht met diverse groenten
+2 | ... | ...
+2 | ... | ...
+... | ... | ...
+Tafel | Aantal | Drank
+1 | 3 | Pilsener
+1 | 1 | Chaudfontaine rood
+2 | ... | ...
+2 | ... | ...
+... | ... | ...
+Dranken | Dranken | Dranken | Dranken
+Bieren | Frisdranken | Warme dranken | Wijnen
+Pilsener | Chaudfontaine rood | Koffie | Per glas
+Kasteel donker | Verse Jus | Thee | Rode port
+Palm | Tonic | Espresso | ...
+... | ... | ... | ...
+Hapjes | Hapjes
+Koude hapjes | Warme hapjes
+Portie kaas met mosterd | Bitterballetjes met mosterd
+Brood met kruidenboter | ...
+Portie salami worst | ...
+... | ...
+Hoofdgerechten | Hoofdgerechten | Hoofdgerechten
+Vegetarisch | Vis | Vlees
+Gebakken banana | Gebakken makreel | Wienerschnitzel
+Bonengerecht met diverse groen | Mosselen uit pan | Biefstuk in champignonsaus
+... | ... | ...
+Nagerechten | Nagerechten
+IJs | Mousse
+Vruchtenijs | Chocolademousse
+Dame Blanche | Vanillemousse
+... | ...
+Voorgerechten | Voorgerechten
+Koud | Warm
+Salade met geitenkaas | Tomatensoep
+Tonijnsalade | Aspergesoep
+... | ...
+
+
+================================================================================
+FILE: Bijlage 7 Vastgesteld technisch ontwerp.docx
+================================================================================
+
+Bijlage 7 Vastgesteld technisch ontwerp
+Technische specificaties
+Lay-out navigatie
+Algemeen
+Grijs/zwarte letters op een witte achtergrond. De submenu's hebben een afwijkende grijs/zwart verhouding, zodat ze extra opvallen.
+Hoofdmenu
+Submenu Overzichten
+Submenu Gegevens
+Schermlay-outs
+Algemeen
+Gebruik zachte, maar wel duidelijk leesbare kleuren wit/grijs/zwart.
+Knoppen met een specifieke functie krijgen een blauwe achtergrond met een witte letter.
+Reserveringen
+De receptie moet een lijst (op het scherm) van reserveringen van de huidige dag kunnen oproepen.
+Bestelling
+De obers moeten de bestellingen efficiënt kunnen invoeren.
+Bon
+De ober moet een bon kunnen uitdraaien voor de klant waarop de bestelde producten staan met de prijs en een totaal te betalen prijs.
+Kok
+De kok moet een lijst zien met daarop de gerechten die klaargemaakt moeten worden.
+Ober
+De ober moet een lijst zien met daarop de dranken en gerechten die klaargemaakt zijn en kunnen worden uitgeserveerd. De lijst is gesorteerd op tijd en tafel.
+Scherm zoals dat van Kok. Maar dan met alle bestellingen.
+Drinken
+Alle betrokkenen moeten de menukaart voor dranken kunnen opvragen. Deze lijst is opvraagbaar bij CRUD Eten.
+Eten
+Alle betrokkenen moeten de menukaart voor eten kunnen opvragen.
+Scherm als van Drinken, maar dan met alleen de gerechten.
+CRUD (toevoegen, wijzigen en verwijderen)
+Klanten 
+Lijst
+Wijzigen
+Dranken
+Gerechten
+Menu hoofdgroepen
+Menu subgroepen
+Lijst
+Wijzigen
+Na verwijderen van gegevens.
+Functionaliteiten
+Reserveringen
+Bestelling
+Bon
+Overzichten
+Ober
+Kok
+Drinken
+Alle betrokkenen moeten de menukaart voor dranken kunnen opvragen.
+Zie Gegevens, dranken.
+Eten
+Alle betrokkenen moeten de menukaart voor eten kunnen opvragen.
+Zie Gegevens, gerechten.
+Gegevens
+De betrokkenen moeten de gegevens toevoegen, wijzigen en verwijderen door middel van de standaard CRUD-methode (Create, Update, Delete). Het betreft de volgende gegevens.
+Reserveringen
+De functie is ondergebracht in de functie Reserveringen.
+Klanten
+Dranken
+Gerechten
+Menu hoofdgroepen
+Menu subgroepen
+Standaard CRUD (CReate, Update, Delete)
+Relationeel datamodel
+Entiteitrelatiediagram
+Datadictionary
+Verwerkte tickets
+Geen wijzigingen in het technisch ontwerp voor de tickets
+[[212]]
+[[213]]
+[[214]]
+[[215]]
+[[216]]
+[[217]]
+[[218]]
+[[219]]
+[[220]]
+[[221]]
+[[222]]
+[[223]]
+[[224]]
+[[225]]
+[[226]]
+[[227]]
+[[228]]
+[[229]]
+[[241]]
+[[245]]
+[[255]]
+Naam | Gerecht | Gerecht | Gerecht | Gerecht | Gerecht | Gerecht | Gerecht | Gerecht
+Definitie | Indeling van gerechten | Indeling van gerechten | Indeling van gerechten | Indeling van gerechten | Indeling van gerechten | Indeling van gerechten | Indeling van gerechten | Indeling van gerechten
+Attribuutnaam | Sleutel | Uniek | Verplicht | Automatisch ophogen | Type | Lengte | Toegestane waardes | Omschrijving
+Gerechtcode | PK | Ja | Ja | - | Varchar | 3 | - | Code voor het type gerecht
+Gerecht | - | - | Ja | - | Varchar | 20 | hoofdgerecht, nagerecht, drank, etc. | Type gerecht
+Relatie | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting
+R1 | Een gerecht bestaat uit een of meer subgerechten. | Een gerecht bestaat uit een of meer subgerechten. | Een gerecht bestaat uit een of meer subgerechten. | Een gerecht bestaat uit een of meer subgerechten. | Een gerecht bestaat uit een of meer subgerechten. | Een gerecht bestaat uit een of meer subgerechten. | Een gerecht bestaat uit een of meer subgerechten. | Een gerecht bestaat uit een of meer subgerechten.
+Naam | Subgerecht | Subgerecht | Subgerecht | Subgerecht | Subgerecht | Subgerecht | Subgerecht | Subgerecht
+Definitie | Onderverdeling van gerechten | Onderverdeling van gerechten | Onderverdeling van gerechten | Onderverdeling van gerechten | Onderverdeling van gerechten | Onderverdeling van gerechten | Onderverdeling van gerechten | Onderverdeling van gerechten
+Attribuutnaam | Sleutel | Uniek | Verplicht | Automatisch ophogen | Type | Lengte | Toegestane waardes | Omschrijving
+GerechtCode | PK/FK | - | Ja | - | Varchar | 3 | - | Code voor het type gerecht
+SubgerechtCode | PK | - | Ja | - | Varchar | 4 | - | Code voor de onderverdeling van gerechten
+SubgerechtCode | - | - | Ja | - | Varchar | 25 | warme voorgerechten, koude dranken, etc. | Onderverdeling van gerechten
+Relatie | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting
+R1 | Een subgerecht hoort altijd bij een gerecht. | Een subgerecht hoort altijd bij een gerecht. | Een subgerecht hoort altijd bij een gerecht. | Een subgerecht hoort altijd bij een gerecht. | Een subgerecht hoort altijd bij een gerecht. | Een subgerecht hoort altijd bij een gerecht. | Een subgerecht hoort altijd bij een gerecht. | Een subgerecht hoort altijd bij een gerecht.
+R2 | Een subgerecht kent altijd een of meer menuitems. | Een subgerecht kent altijd een of meer menuitems. | Een subgerecht kent altijd een of meer menuitems. | Een subgerecht kent altijd een of meer menuitems. | Een subgerecht kent altijd een of meer menuitems. | Een subgerecht kent altijd een of meer menuitems. | Een subgerecht kent altijd een of meer menuitems. | Een subgerecht kent altijd een of meer menuitems.
+Naam | Menuitem | Menuitem | Menuitem | Menuitem | Menuitem | Menuitem | Menuitem | Menuitem
+Definitie | Het gerecht dat de klant bestelt. | Het gerecht dat de klant bestelt. | Het gerecht dat de klant bestelt. | Het gerecht dat de klant bestelt. | Het gerecht dat de klant bestelt. | Het gerecht dat de klant bestelt. | Het gerecht dat de klant bestelt. | Het gerecht dat de klant bestelt.
+Attribuutnaam | Sleutel | Uniek | Verplicht | Automatisch ophogen | Type | Lengte | Toegestane waardes | Omschrijving
+Gerechtcode | PK/FK | - | Ja | - | Varchar | 3 | - | Code voor het type gerecht
+Subgerechtcode | PK/FK | - | Ja | - | Varchar | 4 | - | Code voor de onderverdeling van gerechten
+Menuitemcode | PK/FK | - | Ja | - | Varchar | 4 | - | Code voor het menuitem
+Menuitem | - | - | Ja | - | Varchar | 30 | - | Naam van het menuitem
+Prijs | - | - | Ja | - | Decimal(5,2) |  | - | Prijs van het menuitem
+Relatie | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting
+R1 | Een menuitem hoort altijd bij een subgerecht. | Een menuitem hoort altijd bij een subgerecht. | Een menuitem hoort altijd bij een subgerecht. | Een menuitem hoort altijd bij een subgerecht. | Een menuitem hoort altijd bij een subgerecht. | Een menuitem hoort altijd bij een subgerecht. | Een menuitem hoort altijd bij een subgerecht. | Een menuitem hoort altijd bij een subgerecht.
+R2 | Een menuitem is nul, een of meer malen besteld. | Een menuitem is nul, een of meer malen besteld. | Een menuitem is nul, een of meer malen besteld. | Een menuitem is nul, een of meer malen besteld. | Een menuitem is nul, een of meer malen besteld. | Een menuitem is nul, een of meer malen besteld. | Een menuitem is nul, een of meer malen besteld. | Een menuitem is nul, een of meer malen besteld.
+Naam | Bestelling | Bestelling | Bestelling | Bestelling | Bestelling | Bestelling | Bestelling | Bestelling
+Definitie | De bestelling die de klant aan een bepaalde tafel heeft gedaan. | De bestelling die de klant aan een bepaalde tafel heeft gedaan. | De bestelling die de klant aan een bepaalde tafel heeft gedaan. | De bestelling die de klant aan een bepaalde tafel heeft gedaan. | De bestelling die de klant aan een bepaalde tafel heeft gedaan. | De bestelling die de klant aan een bepaalde tafel heeft gedaan. | De bestelling die de klant aan een bepaalde tafel heeft gedaan. | De bestelling die de klant aan een bepaalde tafel heeft gedaan.
+Attribuutnaam | Sleutel | Uniek | Verplicht | Automatisch ophogen | Type | Lengte | Toegestane waardes | Omschrijving
+Tafel | PK/FK | - | Ja | - | Varchar | 3 | - | Het nummer van de tafel
+Datum | PK/FK | - | Ja | - | Varchar | - | De datum van vandaag | De datum van de bestelling (automatisch)
+Tijd | PK/FK | - | Ja | - | Varchar | - | Tijdstip van de bestelling | De tijd van de bestelling (automatisch)
+Menuitemcode | PK/FK | - | Ja | - | Varchar | 4 | - | Code van het bestelde menuitem
+Aantal | - | - | Ja | - | Int | - |  | Het aantal bestelde menuitems
+Prijs | - | - | Ja | - | Decimal(5,2) | - | - | Prijs van het menuitem op het moment van bestelling (automatisch ingevuld)
+Relatie | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting
+R1 | Een bestelling bestaat uit menuitems. | Een bestelling bestaat uit menuitems. | Een bestelling bestaat uit menuitems. | Een bestelling bestaat uit menuitems. | Een bestelling bestaat uit menuitems. | Een bestelling bestaat uit menuitems. | Een bestelling bestaat uit menuitems. | Een bestelling bestaat uit menuitems.
+R2 | Een bestelling behoort altijd bij een bon. | Een bestelling behoort altijd bij een bon. | Een bestelling behoort altijd bij een bon. | Een bestelling behoort altijd bij een bon. | Een bestelling behoort altijd bij een bon. | Een bestelling behoort altijd bij een bon. | Een bestelling behoort altijd bij een bon. | Een bestelling behoort altijd bij een bon.
+R3 | Een bestelling wordt altijd gedaan ten gevolge van een reservering. | Een bestelling wordt altijd gedaan ten gevolge van een reservering. | Een bestelling wordt altijd gedaan ten gevolge van een reservering. | Een bestelling wordt altijd gedaan ten gevolge van een reservering. | Een bestelling wordt altijd gedaan ten gevolge van een reservering. | Een bestelling wordt altijd gedaan ten gevolge van een reservering. | Een bestelling wordt altijd gedaan ten gevolge van een reservering. | Een bestelling wordt altijd gedaan ten gevolge van een reservering.
+Naam | Bon | Bon | Bon | Bon | Bon | Bon | Bon | Bon
+Definitie | De bon voor de klant als hij betaalt. | De bon voor de klant als hij betaalt. | De bon voor de klant als hij betaalt. | De bon voor de klant als hij betaalt. | De bon voor de klant als hij betaalt. | De bon voor de klant als hij betaalt. | De bon voor de klant als hij betaalt. | De bon voor de klant als hij betaalt.
+Attribuutnaam | Sleutel | Uniek | Verplicht | Automatisch ophogen | Type | Lengte | Toegestane waardes | Omschrijving
+Tafel | PK/FK | - | Ja | - | Varchar | 3 | - | Het nummer van de tafel
+Datum | PK/FK | - | Ja | - | Varchar | - | De datum van vandaag | De datum van de bestellingen
+Tijd | PK/FK | - | Ja | - | Varchar | - | Tijdstip van de bestelling | De tijd van de bestellingen
+Wijze van betaling | - | - | Ja | - | Varchar | 2 | Contant, pin, etc. | Wijze van betaling
+Relatie | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting
+R1 | Een bon bevat altijd een of meer bestellingen. | Een bon bevat altijd een of meer bestellingen. | Een bon bevat altijd een of meer bestellingen. | Een bon bevat altijd een of meer bestellingen. | Een bon bevat altijd een of meer bestellingen. | Een bon bevat altijd een of meer bestellingen. | Een bon bevat altijd een of meer bestellingen. | Een bon bevat altijd een of meer bestellingen.
+Naam | Reservering | Reservering | Reservering | Reservering | Reservering | Reservering | Reservering | Reservering
+Definitie | De klant reserveert een tafel. | De klant reserveert een tafel. | De klant reserveert een tafel. | De klant reserveert een tafel. | De klant reserveert een tafel. | De klant reserveert een tafel. | De klant reserveert een tafel. | De klant reserveert een tafel.
+Attribuutnaam | Sleutel | Uniek | Verplicht | Automatisch ophogen | Type | Lengte | Toegestane waardes | Omschrijving
+Tafel |  | - | Ja | - | Varchar | 3 | - | De tafel die wordt gereserveerd.
+Datum | PK | - | Ja | - | Varchar | - | De datum van vandaag | De datum van de reservering
+Tijd | PK | - | Ja | - | Varchar | - | Tijdstip van de bestelling | De tijd van de reservering
+Klant-id | - | - | Ja | - | Varchar | 5 |  | De klant die reserveert.
+Aantal | - | - | Ja | - | Int | - |  | Het aantal personen dat van de reservering gebruik maakt.
+Relatie | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting
+R1 | De reservering kan een bestelling tot gevolg hebben. | De reservering kan een bestelling tot gevolg hebben. | De reservering kan een bestelling tot gevolg hebben. | De reservering kan een bestelling tot gevolg hebben. | De reservering kan een bestelling tot gevolg hebben. | De reservering kan een bestelling tot gevolg hebben. | De reservering kan een bestelling tot gevolg hebben. | De reservering kan een bestelling tot gevolg hebben.
+R2 | De reservering wordt altijd gedaan door een klant. | De reservering wordt altijd gedaan door een klant. | De reservering wordt altijd gedaan door een klant. | De reservering wordt altijd gedaan door een klant. | De reservering wordt altijd gedaan door een klant. | De reservering wordt altijd gedaan door een klant. | De reservering wordt altijd gedaan door een klant. | De reservering wordt altijd gedaan door een klant.
+Naam | Klant | Klant | Klant | Klant | Klant | Klant | Klant | Klant
+Definitie | De klant die een reservering doet. | De klant die een reservering doet. | De klant die een reservering doet. | De klant die een reservering doet. | De klant die een reservering doet. | De klant die een reservering doet. | De klant die een reservering doet. | De klant die een reservering doet.
+Attribuutnaam | Sleutel | Uniek | Verplicht | Automatisch ophogen | Type | Lengte | Toegestane waardes | Omschrijving
+Klant-id | PK | Ja | Ja | - | Varchar | 3 | - | Id van de klant
+Klantnaam | - | - | Ja | - | Varchar | 30 |  | De naam van de klant.
+Aangepast n.a.v. ticketnummer [[211]]
+Telefoon | - | - | Ja | - | Varchar | 11 | - | Telefoon van de klant
+Relatie | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting | Toelichting
+R1 | De klant heeft een of meer keren gereserveerd. | De klant heeft een of meer keren gereserveerd. | De klant heeft een of meer keren gereserveerd. | De klant heeft een of meer keren gereserveerd. | De klant heeft een of meer keren gereserveerd. | De klant heeft een of meer keren gereserveerd. | De klant heeft een of meer keren gereserveerd. | De klant heeft een of meer keren gereserveerd.
+
+
+================================================================================
+FILE: Bijlage 8 Sjabloon Aanpassingendocument.docx
+================================================================================
+
+Bijlage 8 Sjabloon Aanpassingendocument 
+Onderhoud en beheer 
+Reserverings- en bestellingenapplicatie van restaurant Excellent Taste
+Functionaliteit | Functionaliteit | Ticketnummer | Ticketnummer | Ticketnummer | Ticketnummer
+<Naam functionaliteit> | <Naam functionaliteit> | <Ticketnummer> of n.v.t. | <Ticketnummer> of n.v.t. | <Ticketnummer> of n.v.t. | <Ticketnummer> of n.v.t.
+ |  |  |  |  | 
+Actie | Gewenste aanpassingen | Werkzaamheden | Uren | Uitgevoerd | Uitgevoerd
+Actie | Gewenste aanpassingen | Werkzaamheden | Uren | Door | Datum
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+Functionaliteit | Functionaliteit | Ticketnummer | Ticketnummer | Ticketnummer | Ticketnummer
+<Naam functionaliteit> | <Naam functionaliteit> | <Ticketnummer> of n.v.t. | <Ticketnummer> of n.v.t. | <Ticketnummer> of n.v.t. | <Ticketnummer> of n.v.t.
+ |  |  |  |  | 
+Actie | Gewenste aanpassingen | Werkzaamheden | Uren | Uitgevoerd | Uitgevoerd
+Actie | Gewenste aanpassingen | Werkzaamheden | Uren | Door | Datum
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+
+
+================================================================================
+FILE: Bijlage 9 Coding conventions TechnovaWeb.docx
+================================================================================
+
+Bijlage 9 Coding conventions TechnovaWeb
+Inleiding
+De coding conventions zoals die bij TechnovaWeb gelden, betreffen naamgeving van variabelen en functies (zoals hooflettergebruik), uitlijning van de broncode en commentaarregels n.a.v. doorvoeren van tickets. Deze conventions zijn toepasbaar op onder meer C#, Delphi, PHP/Javascript en Java. 
+De voorbeelden zijn gecodeerd in C#/Java.
+Naamgeving van variabelen en functies
+Gebruik PascalCasing voor de namen van klassen en methoden.
+public class ClientActivity
+{
+    public void ClearStatistics()
+    {
+        //...
+    }
+    public void CalculateStatistics()
+    {
+        //...
+    }
+}
+Gebruik CamelCasing voor de parameters van methoden, lokale variabelen en voor de instantie van classes.
+public class UserLog
+{
+   public void Add(LogEvent logEvent)
+    {
+        int itemCount = logEvent.Items.Count;
+        // ...
+    }
+}
+UserGroup userGroup;
+Assignment employeeAssignment;
+CustomerId customerId;
+XmlDocument xmlDocument;
+FtpHelper ftpHelper;
+UriPart uriPart;
+HtmlHelper htmlHelper;
+FtpTransfer ftpTransfer;
+UIControl uiControl;
+Gebruik géén underscore (onderstreepte spatie) in namen.
+Uitzondering
+Je mag een onderstreepte spatiestreepje gebruiken als prefix van statische variabelen. 
+public DateTime clientAppointment;
+public TimeSpan timeLeft;
+private DateTime _registrationDate;
+Gebruik de standaard gedefinieerde typenamen (string, int, bool) in plaats van de system typenamen zoals Int16, Single, UInt64.
+string firstName;
+int lastIndex;
+bool isSaved;
+Gebruik zelfstandige naamwoorden of zelfstandig naamwoordzinnen voor de naam van een klasse.
+public class Employee
+{
+}
+public class BusinessLocation
+{
+}
+public class DocumentCollection
+{
+}
+Declareer alle variabelen bovenin de klasse. 
+public class Account
+{
+    public string Number {get; set;}
+    public DateTime DateOpened {get; set;}
+    public DateTime DateClosed {get; set;}
+    public decimal Balance {get; set;}
+    // Constructor
+    public Account()
+    {
+        // ...
+    }
+}
+Begrippen
+Pascalcase
+Eén woord maken van afzonderlijke woorden die met een hoofdletter beginnen.
+Voorbeeld: Gekookte Eieren Eten wordt in PascalCasing: GekookteEierenEten.
+Camelcase
+Is gelijk aan Pascalcase, maar de eerste letter van het eerste woord is altijd een kleine letter.
+Voorbeeld: Gekookte Eieren Eten wordt in CamelCasing: gekookteEierenEten.
+Uitlijning
+Lijn alle accolades verticaal uit: zet ze netjes onder elkaar. Spring binnen de accolades in met tabs van 4 spaties.
+class Program
+{
+    static void Main(string[] args)
+    {
+    }
+}
+Commentaarregels naar aanleiding van het doorvoeren van tickets
+Toevoegen van regels code
+        // Toegevoegd n.a.v. ticketnummer [[1506]]
+        private void .....
+        {
+            string toer.....;
+            .....;
+            .....;
+            .....;
+        }
+        // Einde Toegevoegd n.a.v. ticketnummer [[1506]]
+  Wijzigen van diverse regels code
+      private void .....
+        {
+            if ( ..... )
+            {
+                // Gewijzigd n.a.v. ticketnummer [[1516]]
+                string toer......;
+                foreach (..... in .....)
+                {
+                    .....;
+                    .....;
+                }
+                .....
+                .....
+                // Einde Gewijzigd n.a.v. ticketnummer [[1516]]
+            }
+        }
+Toevoegen/wijzigen van een enkele regel code
+        private void .....
+        {
+            FormMBOOpen.ResetcbbToernooien(); // Toegevoegd n.a.v. ticketnummer [[1511]]
+            MaakGridVanDB(Toernooien); // Gewijzigd n.a.v. ticketnummer [[1511]]
+        }
+
