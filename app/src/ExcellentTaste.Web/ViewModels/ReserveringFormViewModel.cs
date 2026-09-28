@@ -21,10 +21,10 @@ public class ReserveringFormViewModel
     public string? Telefoon { get; set; }
 
     [Display(Name = "Reserveringsdatum (dd-mm-jjjj)")]
-    public string Datum { get; set; } = "";
+    public DateOnly Datum { get; set; } = new DateOnly();
 
     [Display(Name = "Reserveringstijd (uu:mm)")]
-    public string Tijd { get; set; } = "";
+    public TimeOnly Tijd { get; set; } = new TimeOnly();
 
     [Range(1, 10, ErrorMessage = "Kies een tafelnummer van 1 tot en met 10.")]
     [Display(Name = "Tafelnummer")]
@@ -38,15 +38,12 @@ public class ReserveringFormViewModel
 
     public Reservering ToReservering(int klantId)
     {
-        DateOnly.TryParseExact(Datum, "dd-MM-yyyy", out var datum);
-        TimeOnly.TryParseExact(Tijd, "HH:mm", out var tijd);
-
         return new Reservering
         {
             ReserveringId = ReserveringId,
             KlantId = klantId,
-            Datum = datum,
-            Tijd = tijd,
+            Datum = Datum,
+            Tijd = Tijd,
             Tafel = Tafel,
             Aantal = Aantal,
             Status = 1

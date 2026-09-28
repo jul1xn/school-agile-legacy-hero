@@ -205,15 +205,16 @@ public class ReserveringenController : Controller
 
     private bool ValidateDatumEnTijd(ReserveringFormViewModel model)
     {
-        if (!DateOnly.TryParseExact(model.Datum, "dd-MM-yyyy", DutchCulture, DateTimeStyles.None, out _))
-        {
-            ModelState.AddModelError(nameof(model.Datum), "Gebruik de notatie dd-mm-jjjj.");
-        }
+        // Niet nodig omdat het al dates and times zijn
+        //if (!DateOnly.TryParseExact(model.Datum, "dd-MM-yyyy", DutchCulture, DateTimeStyles.None, out _))
+        //{
+        //    ModelState.AddModelError(nameof(model.Datum), "Gebruik de notatie dd-mm-jjjj.");
+        //}
 
-        if (!TimeOnly.TryParseExact(model.Tijd, "HH:mm", DutchCulture, DateTimeStyles.None, out _))
-        {
-            ModelState.AddModelError(nameof(model.Tijd), "Gebruik de notatie uu:mm.");
-        }
+        //if (!TimeOnly.TryParseExact(model.Tijd, "HH:mm", DutchCulture, DateTimeStyles.None, out _))
+        //{
+        //    ModelState.AddModelError(nameof(model.Tijd), "Gebruik de notatie uu:mm.");
+        //}
 
         return ModelState.IsValid;
     }
@@ -250,8 +251,8 @@ public class ReserveringenController : Controller
             KlantId = reservering.KlantId,
             KlantNaam = reservering.KlantNaam,
             Telefoon = reservering.Telefoon,
-            Datum = reservering.Datum.ToString("dd-MM-yyyy", DutchCulture),
-            Tijd = reservering.Tijd.ToString("HH:mm", DutchCulture),
+            Datum = reservering.Datum,
+            Tijd = reservering.Tijd,
             Tafel = reservering.Tafel,
             Aantal = reservering.Aantal
         };
