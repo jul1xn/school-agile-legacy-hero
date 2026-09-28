@@ -109,8 +109,7 @@ WHERE reservering_id = @id
     {
         using var connection = _database.OpenConnection();
         using var command = connection.CreateCommand();
-        // Legacy issue: dit verwijdert echt, terwijl de database ook een statusveld heeft.
-        command.CommandText = "DELETE FROM reservering WHERE reservering_id = -1";
+        command.CommandText = "DELETE FROM reservering WHERE reservering_id = @id";
         Add(command, "@id", id);
         command.ExecuteNonQuery();
     }
