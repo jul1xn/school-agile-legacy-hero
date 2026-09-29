@@ -18,8 +18,15 @@ public class ReserveringService
 
     public (bool Gelukt, string Bericht, int Id) Add(Reservering reservering)
     {
-        var id = _reserveringen.Add(reservering);
-        return (true, "Reservering opgeslagen.", id);
+        try
+        {
+            var id = _reserveringen.Add(reservering);
+            return (true, "Reservering opgeslagen.", id);
+        }
+        catch (Exception ex)
+        {
+            return (false, ex.Message, -1);
+        }
     }
 
     public (bool Gelukt, string Bericht) Update(int id, Reservering reservering)

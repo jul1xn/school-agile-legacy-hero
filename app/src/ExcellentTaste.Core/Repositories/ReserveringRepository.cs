@@ -71,6 +71,11 @@ WHERE tafel = @tafel AND datum = @datum AND tijd = @tijd
 
     public int Add(Reservering reservering)
     {
+        // Check eerst of de tafel bezet is
+        if (IsTafelBezet(reservering.Tafel, reservering.Datum, reservering.Tijd))
+        {
+            throw new InvalidOperationException($"Tafel {reservering.Tafel} is al bezet op {reservering.Datum:dd-MM-yyyy} om {reservering.Tijd:HH\\:mm}.");
+        }
         using var connection = _database.OpenConnection();
         using var command = connection.CreateCommand();
         string datum = reservering.Datum == DateOnly.MinValue ? "" : $"'{reservering.Datum:yyyy-MM-dd}'";

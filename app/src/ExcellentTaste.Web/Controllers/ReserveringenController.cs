@@ -237,7 +237,7 @@ public class ReserveringenController : Controller
     {
         if (!response.IsSuccessStatusCode)
         {
-            return new ApiResult(false, "De reservering kon niet worden opgeslagen.");
+            return new ApiResult(false, (await response.Content.ReadFromJsonAsync<ApiResult>())?.Bericht ?? "De reservering kon niet worden opgeslagen.");
         }
 
         return await response.Content.ReadFromJsonAsync<ApiResult>() ?? new ApiResult(true, "");
