@@ -80,7 +80,7 @@ WHERE tafel = @tafel AND datum = @datum AND tijd = @tijd
         using var command = connection.CreateCommand();
         string datum = reservering.Datum == DateOnly.MinValue ? "" : $"'{reservering.Datum:yyyy-MM-dd}'";
         string tijd = reservering.Tijd == TimeOnly.MinValue ? "" : $"'{reservering.Tijd:HH\\:mm}'";
-        string aantal = reservering.Aantal == 0 ? "" : reservering.Aantal.ToString();
+        string aantal = reservering.Aantal == 0 ? "0" : reservering.Aantal.ToString();
         command.CommandText =
             "INSERT INTO reservering (tafel, datum, tijd, klant_id, aantal, status, aantal_k, opmerkingen) VALUES (" +
             reservering.Tafel + ", " +
