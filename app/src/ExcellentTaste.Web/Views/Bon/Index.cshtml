@@ -3,8 +3,9 @@
 @{
     // Print lege pagina om inkt te besparen tijdens debuggen, voor oplevering weer verwijderen!!1
     Layout = null;
-    ViewData["Title"] = "Restaurant Excellent Taste";
-    var totaal = Model.Sum(regel => regel.Totaal);
+    ViewData["Title"] = "Restaurant Excellent Verandering";
+    var bon = Model ?? new List<ExcellentTaste.Core.Models.BonRegel>();
+    var totaal = bon.Sum(regel => regel.Totaal);
 }
 
 @if (ViewBag.ApiFout is string apiFout)
@@ -15,7 +16,7 @@
 }
 
 <center>
-    <button class="btn btn-primary" onclick="window.print(); window.close();">
+    <button class="btn btn-primary" onclick="window.print(); window.close()">
         Print bon
     </button>
 </center>
@@ -30,7 +31,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var regel in Model)
+            @foreach (var regel in bon)
             {
                 <tr>
                     <td>@regel.MenuItemNaam</td>

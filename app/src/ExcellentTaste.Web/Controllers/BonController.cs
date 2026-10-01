@@ -20,7 +20,7 @@ public class BonController : Controller
         try
         {
             var client = _httpClientFactory.CreateClient("ExcellentTasteApi");
-            var bon = await client.GetFromJsonAsync<List<BonRegel>>($"api/bestellingen/{reservering}/bon") ?? [];
+            var bon = await client.GetFromJsonAsync<List<BonRegel>>($"api/bestellingen/{reservering}/bon") ?? new List<BonRegel>();
             return View(bon);
         }
         catch (Exception ex)
