@@ -3,7 +3,8 @@
 @{
     ViewData["Title"] = "Medewerkersrooster";
     var nl = System.Globalization.CultureInfo.GetCultureInfo("nl-NL");
-    var urenDezeWeek = Model.Diensten.Sum(d => d.GewerkteUren);
+    var weekEinde = Model.WeekStart.AddDays(7);
+    var urenDezeWeek = Model.Diensten.Sum(d => d.UrenInPeriode(Model.WeekStart, weekEinde));
 }
 
 <div class="container-fluid">
@@ -47,7 +48,8 @@
                 <tr>
                     @foreach (var dag in Model.Dagen)
                     {
-                        var dagDiensten = Model.Diensten.Where(d => d.StartTijd.Date == dag.Date).OrderBy(d => d.StartTijd).ToList();
+                        var dagEinde = dag.Date.AddDays(1);
+                        var dagDiensten = Model.Diensten.Where(d => d.StartTijd < dagEinde && d.EindTijd > dag.Date).OrderBy(d => d.StartTijd).ToList();
                         <td>
                             @if (dagDiensten.Count == 0)
                             {
@@ -57,9 +59,9 @@
                             {
                                 <div class="panel panel-primary">
                                     <div class="panel-body">
-                                        <strong>@dienst.StartTijd.ToString("HH:mm") &ndash; @dienst.EindTijd.ToString("HH:mm")</strong>
+                                        <strong>@(dienst.StartTijd > dag.Date ? dienst.StartTijd.ToString("HH:mm") : "00:00") &ndash; @(dienst.EindTijd < dagEinde ? dienst.EindTijd.ToString("HH:mm") : "24:00")</strong>
                                         <div>@dienst.MedewerkerNaam</div>
-                                        <div class="small text-muted">@dienst.GewerkteUren.ToString("0.##") uur</div>
+                                        <div class="small text-muted">@dienst.UrenInPeriode(dag.Date, dagEinde).ToString("0.##") uur deze dag</div>
                                         <div class="btn-group btn-group-xs" role="group" aria-label="Dienstacties">
                                             <a asp-action="Edit" asp-route-id="@dienst.DienstId" class="btn btn-default">Wijzigen</a>
                                             <form asp-action="Delete" method="post" onsubmit="return confirm('Weet je zeker dat je deze dienst wilt verwijderen?');">
@@ -92,7 +94,7 @@
                     <tbody>
                     @foreach (var groep in Model.Diensten.GroupBy(d => new { d.MedewerkerId, d.MedewerkerNaam }).OrderBy(g => g.Key.MedewerkerNaam))
                     {
-                        <tr><td>@groep.Key.MedewerkerNaam</td><td>@groep.Count()</td><td>@groep.Sum(d => d.GewerkteUren).ToString("0.##") uur</td></tr>
+                        <tr><td>@groep.Key.MedewerkerNaam</td><td>@groep.Count()</td><td>@groep.Sum(d => d.UrenInPeriode(Model.WeekStart, weekEinde)).ToString("0.##") uur</td></tr>
                     }
                     </tbody>
                 </table>

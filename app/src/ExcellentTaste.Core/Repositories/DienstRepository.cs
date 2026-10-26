@@ -19,7 +19,7 @@ public class DienstRepository : RepositoryBase
         command.CommandText = """
 SELECT d.dienst_id, d.medewerker_id, m.naam AS medewerker_naam, d.start_tijd, d.eind_tijd
 FROM dienst d JOIN medewerker m ON d.medewerker_id = m.medewerker_id
-WHERE d.start_tijd >= @start AND d.start_tijd < @einde
+WHERE d.start_tijd < @einde AND d.eind_tijd > @start
 ORDER BY d.start_tijd, m.naam
 """;
         Add(command, "@start", start);
