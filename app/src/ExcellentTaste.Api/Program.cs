@@ -8,10 +8,14 @@ builder.Services.AddControllers();
 builder.Services.AddSingleton(new DatabaseConnection(builder.Configuration.GetConnectionString("ExcellentTaste")));
 builder.Services.AddScoped<KlantRepository>();
 builder.Services.AddScoped<ReserveringRepository>();
+builder.Services.AddScoped<MedewerkerRepository>();
+builder.Services.AddScoped<DienstRepository>();
 builder.Services.AddScoped<BestellingRepository>();
 builder.Services.AddScoped<MenuRepository>();
 builder.Services.AddScoped<OverzichtRepository>();
 builder.Services.AddScoped<ReserveringService>();
+builder.Services.AddScoped<MedewerkerService>();
+builder.Services.AddScoped<DienstService>();
 builder.Services.AddScoped<BestellingService>();
 
 var app = builder.Build();

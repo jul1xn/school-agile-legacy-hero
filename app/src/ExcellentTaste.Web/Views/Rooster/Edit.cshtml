@@ -1,0 +1,10 @@
+@model ExcellentTaste.Web.ViewModels.DienstFormViewModel
+@{ ViewData["Title"] = "Dienst wijzigen"; }
+<div class="container-fluid">
+    <h2>Dienst wijzigen</h2>
+    <div class="panel panel-default"><div class="panel-body">
+        <form asp-action="Edit" asp-route-id="@Model.DienstId" method="post" class="form-horizontal">
+            @await Html.PartialAsync("_Form", Model)
+        </form>
+    </div></div>
+</div>

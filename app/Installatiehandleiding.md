@@ -41,6 +41,8 @@ De dump staat in:
 database/excellenttaste_db.sql
 ```
 
+De API maakt bij het starten ook de tabellen `medewerker` en `dienst` aan als die nog ontbreken. Hiervoor moet de databasegebruiker tabellen kunnen aanmaken.
+
 Moet je de database nog aanmaken? Start MySQL of MariaDB en importeer de dump:
 
 ```text

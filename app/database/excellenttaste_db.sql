@@ -288,3 +288,27 @@ INSERT INTO subgerecht (gerechtcode, subgerechtcode, subgerechtnaam) VALUES
 ('vog', 'wav', 'Warme voorgerechten'),
 ('drk', 'wdk', 'Warme dranken'),
 ('drk', 'wik', 'Wijnen');
+
+-- --------------------------------------------------------
+-- Medewerkers en het zelfstandige weekrooster (ticket 348)
+-- --------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS medewerker (
+  medewerker_id int(11) NOT NULL AUTO_INCREMENT,
+  naam varchar(100) NOT NULL,
+  functie varchar(60) NOT NULL DEFAULT '',
+  actief tinyint(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (medewerker_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS dienst (
+  dienst_id int(11) NOT NULL AUTO_INCREMENT,
+  medewerker_id int(11) NOT NULL,
+  start_tijd datetime NOT NULL,
+  eind_tijd datetime NOT NULL,
+  PRIMARY KEY (dienst_id),
+  KEY ix_dienst_start_tijd (start_tijd),
+  KEY ix_dienst_medewerker (medewerker_id),
+  CONSTRAINT fk_dienst_medewerker FOREIGN KEY (medewerker_id)
+    REFERENCES medewerker (medewerker_id) ON DELETE RESTRICT ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

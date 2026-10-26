@@ -1,0 +1,6 @@
+@model ExcellentTaste.Web.ViewModels.MedewerkerFormViewModel
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group"><label asp-for="Naam"></label><input asp-for="Naam" class="form-control" /><span asp-validation-for="Naam" class="text-danger"></span></div>
+<div class="form-group"><label asp-for="Functie"></label><input asp-for="Functie" class="form-control" placeholder="Bijvoorbeeld bediening" /><span asp-validation-for="Functie" class="text-danger"></span></div>
+<div class="checkbox"><label><input asp-for="Actief" /> @Html.DisplayNameFor(model => model.Actief)</label></div>
+<div><button type="submit" class="btn btn-primary">Bewaren</button> <a asp-action="Index" class="btn btn-default">Annuleren</a></div>

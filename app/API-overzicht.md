@@ -18,6 +18,18 @@ POST   /api/reserveringen
 PUT    /api/reserveringen/{id}
 DELETE /api/reserveringen/{id}
 
+GET    /api/medewerkers
+GET    /api/medewerkers/{id}
+POST   /api/medewerkers
+PUT    /api/medewerkers/{id}
+DELETE /api/medewerkers/{id}
+
+GET    /api/diensten?start={datum}&einde={datum}
+GET    /api/diensten/{id}
+POST   /api/diensten
+PUT    /api/diensten/{id}
+DELETE /api/diensten/{id}
+
 GET    /api/klanten
 GET    /api/menuitems
 GET    /api/gegevens/drinken

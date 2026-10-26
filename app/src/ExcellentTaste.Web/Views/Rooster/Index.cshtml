@@ -1,0 +1,102 @@
+@model ExcellentTaste.Web.ViewModels.RoosterViewModel
+
+@{
+    ViewData["Title"] = "Medewerkersrooster";
+    var nl = System.Globalization.CultureInfo.GetCultureInfo("nl-NL");
+    var urenDezeWeek = Model.Diensten.Sum(d => d.GewerkteUren);
+}
+
+<div class="container-fluid">
+    <div class="clearfix">
+        <a asp-action="Create" asp-route-dag="@Model.WeekStart.ToString("yyyy-MM-dd")" class="btn btn-primary pull-right">Dienst toevoegen</a>
+        <h2>Medewerkersrooster</h2>
+    </div>
+    <p class="text-muted">Plan diensten en houd de uren per medewerker bij.</p>
+
+    @if (ViewBag.ApiFout is string apiFout)
+    {
+        <div class="alert alert-warning" role="alert">@apiFout</div>
+    }
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="btn-group" role="group" aria-label="Week kiezen">
+                <a class="btn btn-default" asp-action="Index" asp-route-week="@Model.WeekStart.AddDays(-7).ToString("yyyy-MM-dd")" aria-label="Vorige week">&larr;</a>
+                <a class="btn btn-default" asp-action="Index" asp-route-week="@DateTime.Today.ToString("yyyy-MM-dd")">Vandaag</a>
+                <a class="btn btn-default" asp-action="Index" asp-route-week="@Model.WeekStart.AddDays(7).ToString("yyyy-MM-dd")" aria-label="Volgende week">&rarr;</a>
+            </div>
+            <strong>@Model.WeekStart.ToString("d MMMM", nl) &ndash; @Model.WeekStart.AddDays(6).ToString("d MMMM yyyy", nl)</strong>
+            <span class="text-muted pull-right">@Model.Diensten.Count dienst(en) &middot; @urenDezeWeek.ToString("0.##") uur gepland</span>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered" aria-label="Weekrooster">
+            <thead>
+                <tr>
+                    @foreach (var dag in Model.Dagen)
+                    {
+                        <th scope="col" class="text-nowrap @(dag.Date == DateTime.Today ? "text-primary" : "")">
+                            <span class="text-capitalize">@dag.ToString("dddd", nl)</span><br />
+                            <span class="text-muted">@dag.ToString("d MMM", nl)</span>
+                        </th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var dag in Model.Dagen)
+                    {
+                        var dagDiensten = Model.Diensten.Where(d => d.StartTijd.Date == dag.Date).OrderBy(d => d.StartTijd).ToList();
+                        <td>
+                            @if (dagDiensten.Count == 0)
+                            {
+                                <a asp-action="Create" asp-route-dag="@dag.ToString("yyyy-MM-dd")" class="btn btn-xs btn-default">+ Dienst plannen</a>
+                            }
+                            @foreach (var dienst in dagDiensten)
+                            {
+                                <div class="panel panel-primary">
+                                    <div class="panel-body">
+                                        <strong>@dienst.StartTijd.ToString("HH:mm") &ndash; @dienst.EindTijd.ToString("HH:mm")</strong>
+                                        <div>@dienst.MedewerkerNaam</div>
+                                        <div class="small text-muted">@dienst.GewerkteUren.ToString("0.##") uur</div>
+                                        <div class="btn-group btn-group-xs" role="group" aria-label="Dienstacties">
+                                            <a asp-action="Edit" asp-route-id="@dienst.DienstId" class="btn btn-default">Wijzigen</a>
+                                            <form asp-action="Delete" method="post" onsubmit="return confirm('Weet je zeker dat je deze dienst wilt verwijderen?');">
+                                                <input type="hidden" name="id" value="@dienst.DienstId" />
+                                                <input type="hidden" name="week" value="@Model.WeekStart.ToString("yyyy-MM-dd")" />
+                                                <button type="submit" class="btn btn-default">Verwijderen</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong>Uren per medewerker deze week</strong></div>
+        @if (Model.Diensten.Count == 0)
+        {
+            <div class="panel-body"><p class="text-muted">Er zijn deze week nog geen uren ingepland.</p></div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead><tr><th scope="col">Medewerker</th><th scope="col">Diensten</th><th scope="col">Uren</th></tr></thead>
+                    <tbody>
+                    @foreach (var groep in Model.Diensten.GroupBy(d => new { d.MedewerkerId, d.MedewerkerNaam }).OrderBy(g => g.Key.MedewerkerNaam))
+                    {
+                        <tr><td>@groep.Key.MedewerkerNaam</td><td>@groep.Count()</td><td>@groep.Sum(d => d.GewerkteUren).ToString("0.##") uur</td></tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </section>
+</div>
